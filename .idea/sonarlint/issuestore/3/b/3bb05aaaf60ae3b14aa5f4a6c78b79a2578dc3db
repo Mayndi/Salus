@@ -1,0 +1,15 @@
+
+i
+java:S4488W"NReplace "@RequestMapping(method = RequestMethod.DELETE)" with "@DeleteMapping"(ıº²Ãùÿÿÿÿ
+\
+java:S1854["ARemove this useless assignment to local variable "usuarioEntity".(ñÇĞòşÿÿÿÿ
+e
+java:S4488!"JReplace "@RequestMapping(method = RequestMethod.POST)" with "@PostMapping"(µ›«…ûÿÿÿÿ
+^
+java:S4488H"HReplace "@RequestMapping(method = RequestMethod.GET)" with "@GetMapping"(Ñ˜Ò
+M
+java:S1481["2Remove this unused "usuarioEntity" local variable.(ñÇĞòşÿÿÿÿ
+^
+java:S4488."HReplace "@RequestMapping(method = RequestMethod.PUT)" with "@PutMapping"(ğ«Û’
+c
+java:S4488;"HReplace "@RequestMapping(method = RequestMethod.GET)" with "@GetMapping"(²èª£şÿÿÿÿ
