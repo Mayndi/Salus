@@ -1,0 +1,11 @@
+
+f
+java:S1068"KRemove this unused "MESSAGE_INVALID_INFORMATION_EXTERNAL_ID" private field.(¼üM8àÍ¿ó.
+p
+java:S1068"NRemove this unused "MESSAGE_INVALID_HOLDING_INFORMATION_OBJECT" private field.(ñÇ•ûÿÿÿÿ8àÍ¿ó.
+ƒ
+java:S14881"fImmediately return this expression instead of assigning it to the temporary variable "updatedaddress".(¡çìƒ8àÍ¿ó.
+x
+java:S1488T"]Immediately return this expression instead of assigning it to the temporary variable "count".(‡­å£şÿÿÿÿ
+
+java:S14887"nImmediately return this expression instead of assigning it to the temporary variable "addressEntityArrayList".(ÒíÿÛøÿÿÿÿ8àÍ¿ó.

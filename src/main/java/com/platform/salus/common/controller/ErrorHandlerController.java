@@ -1,6 +1,6 @@
 package com.platform.salus.common.controller;
 
-import com.platform.salus.user.controller.UserController;
+import com.platform.salus.registry.user.controller.UserController;
 import org.springframework.boot.web.servlet.error.ErrorController;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.ControllerAdvice;

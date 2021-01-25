@@ -1,0 +1,11 @@
+
+
+java:S14881"dImmediately return this expression instead of assigning it to the temporary variable "updatedmedic".(Âøı8Ğää½ó.
+p
+java:S1068"NRemove this unused "MESSAGE_INVALID_HOLDING_INFORMATION_OBJECT" private field.(ñÇ•ûÿÿÿÿ8ÉÕŞ½ó.
+f
+java:S1068"KRemove this unused "MESSAGE_INVALID_INFORMATION_EXTERNAL_ID" private field.(¼üM8ÉÕŞ½ó.
+
+java:S14887"lImmediately return this expression instead of assigning it to the temporary variable "medicEntityArrayList".(ˆûï”øÿÿÿÿ8Ğää½ó.
+
+java:S1488T"]Immediately return this expression instead of assigning it to the temporary variable "count".(¨‚æëúÿÿÿÿ8Ğää½ó.
