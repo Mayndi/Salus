@@ -1,0 +1,15 @@
+
+W
+java:S1854["BRemove this useless assignment to local variable "enderecoEntity".(­ύς!
+e
+java:S4488!"JReplace "@RequestMapping(method = RequestMethod.POST)" with "@PostMapping"(µ›«…ϋÿÿÿÿ
+i
+java:S4488W"NReplace "@RequestMapping(method = RequestMethod.DELETE)" with "@DeleteMapping"(ύΊ²Γωÿÿÿÿ
+O
+java:S1481["3Remove this unused "enderecoEntity" local variable.(­ύς!8ΆεΧρ.
+c
+java:S4488;"HReplace "@RequestMapping(method = RequestMethod.GET)" with "@GetMapping"(²θª£ώÿÿÿÿ
+^
+java:S4488H"HReplace "@RequestMapping(method = RequestMethod.GET)" with "@GetMapping"(ΡÒ
+^
+java:S4488."HReplace "@RequestMapping(method = RequestMethod.PUT)" with "@PutMapping"(π«Ϋ’
