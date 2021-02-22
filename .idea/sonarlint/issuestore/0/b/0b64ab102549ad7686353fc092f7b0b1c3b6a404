@@ -1,17 +1,0 @@
-
-€
-java:S1488/"cImmediately return this expression instead of assigning it to the temporary variable "updatedUser".(ŠçÙó8Ç¤„¸ó.
-f
-java:S1068"KRemove this unused "MESSAGE_INVALID_INFORMATION_EXTERNAL_ID" private field.(¼üM8ßÎ¦¸ó.
-ˆ
-java:S14885"kImmediately return this expression instead of assigning it to the temporary variable "userEntityArrayList".(Æßìç8ì’‘¸ó.
-p
-java:S1068"NRemove this unused "MESSAGE_INVALID_HOLDING_INFORMATION_OBJECT" private field.(ñÇ•ûÿÿÿÿ8ßÎ¦¸ó.
-·
-java:S11304"™Remove the declaration of thrown exception 'com.platform.salus.common.exceptions.InvalidPageRequestException', as it cannot be thrown from method's body.(üúí´8»Ì™Àó.
-f
-java:S2583="DChange this condition so that it does not always evaluate to "false"(¿º©Ïıÿÿÿÿ8»Ì™Àó.
-z
-java:S1488R"]Immediately return this expression instead of assigning it to the temporary variable "count".(ˆü8Û·¥¸ó.
-¼
-java:S1130"™Remove the declaration of thrown exception 'com.platform.salus.common.exceptions.InvalidInformationException', as it cannot be thrown from method's body.(ö…Ó„şÿÿÿÿ8»Ì™Àó.

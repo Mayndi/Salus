@@ -1,0 +1,6 @@
+
+^
+java:S1854a"BRemove this useless assignment to local variable "hospitalEntity".(ˆ´y8Âˆ†”ô.
+O
+java:S1481a"3Remove this unused "hospitalEntity" local variable.(ˆ´y8Âˆ†”ô.
+o	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(Î’Ò

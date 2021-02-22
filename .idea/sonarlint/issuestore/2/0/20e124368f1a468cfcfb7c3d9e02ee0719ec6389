@@ -1,0 +1,6 @@
+
+M
+java:S1481b"0Remove this unused "medicEntity" local variable.(ΈΪΓ8ύςΎσ.
+u	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(η‹8 ή’τ.
+\
+java:S1854b"?Remove this useless assignment to local variable "medicEntity".(ΈΪΓ8ύςΎσ.

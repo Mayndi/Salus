@@ -63,6 +63,12 @@ public class ValidationUtils {
             throw new InvalidInformationException(messageIfError);
     }
 
+    public static void checkCnpj(String cnpj, String messageIfError) throws InvalidInformationException {
+        String cnpjCheck = cnpj.replace(".", "").replace("-", "").replace("/", "");;
+        if (cnpjCheck.length() != 14 || cnpjCheck == null)
+            throw new InvalidInformationException(messageIfError);
+    }
+
     public static void checkSus(String nSus, String messageIfError) throws InvalidInformationException {
         String nSusCheck = nSus.replace(".", "").replace("-", "");
         if (nSusCheck.length() != 15 || nSus == null)

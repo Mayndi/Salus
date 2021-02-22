@@ -1,0 +1,6 @@
+
+^
+java:S1854a"ARemove this useless assignment to local variable "contactEntity".(«®¹¹8İ€è¼ó.
+v	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(¨Û‰¥8ñİ’ô.
+O
+java:S1481a"2Remove this unused "contactEntity" local variable.(«®¹¹8İ€è¼ó.

@@ -1,7 +1,0 @@
-
-·
-java:S1130"™Remove the declaration of thrown exception 'com.platform.salus.common.exceptions.InvalidInformationException', as it cannot be thrown from method's body.(Ò’²à8ÃÃ¯Àó.
-O
-java:S1068"2Remove this unused "converterUtils" private field.(½ Ïƒ8àÂ˜¾ó.
-£
-java:S11867"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(ÙÅ‚Íþÿÿÿÿ8þÛ‹Ãó.

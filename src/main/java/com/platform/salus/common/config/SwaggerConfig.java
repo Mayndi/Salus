@@ -16,16 +16,16 @@ import springfox.documentation.swagger2.annotations.EnableSwagger2;
 @EnableSwagger2
 public class SwaggerConfig implements WebMvcConfigurer {
     @Bean
-    public Docket greetingApi() {
-        return new Docket(DocumentationType.SWAGGER_2)
+    public Docket api() {
+        return new Docket(DocumentationType.SWAGGER_2).groupName("api")
                 .select()
-                .apis(RequestHandlerSelectors.any())
-                .paths(PathSelectors.any())
-                .build();
+                .apis( RequestHandlerSelectors.any() )
+                .paths(PathSelectors.regex("/api/.*"))
+                .build()
+                .apiInfo(apiInfo());
     }
 
-
-    private ApiInfo metaData() {
+    private ApiInfo apiInfo() {
         return new ApiInfoBuilder()
                 .title("Salus API")
                 .description("\"Salus descrition\"")
