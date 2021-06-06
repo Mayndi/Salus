@@ -6,7 +6,6 @@ public class MedicUpdateInput {
     private String nConvenio;
     private String telefoneConvenio;
     private String historico;
-    private String sexo;
     private String deficiencia;
     private String alergias;
     private String obs;
@@ -44,15 +43,6 @@ public class MedicUpdateInput {
 
     public MedicUpdateInput setHistorico(String historico) {
         this.historico = historico;
-        return this;
-    }
-
-    public String getSexo() {
-        return sexo;
-    }
-
-    public MedicUpdateInput setSexo(String sexo) {
-        this.sexo = sexo;
         return this;
     }
 

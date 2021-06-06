@@ -2,6 +2,7 @@ package com.platform.salus.registryUser.user.converter.input;
 
 public class UserInput {
 
+    private Long id;
     private String nomeCompleto;
     private String dataNascimento;
     private String cpf;
@@ -9,6 +10,14 @@ public class UserInput {
     private String email;
     private String senha;
     private String confSenha;
+
+    public Long getId() {
+        return id;
+    }
+
+    public void setId(Long id) {
+        this.id = id;
+    }
 
     public String getNomeCompleto() {
         return nomeCompleto;

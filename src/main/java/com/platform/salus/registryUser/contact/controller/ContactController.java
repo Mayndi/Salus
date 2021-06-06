@@ -43,7 +43,7 @@ public class ContactController extends ContactBaseController {
     public ResponseEntity<ContactOutput> update(@PathVariable Long id, @RequestBody ContactInput contact) {
 
         try {
-            ContactEntity contactEntity = contactService.update(id, this.contactConverter.inputToEntity(contact));
+            ContactEntity contactEntity = contactService.update(id, this.contactConverter.inputToUpdateEntity(contact));
 
             return ok(this.contactConverter.entityToOutput(contactEntity));
         } catch (InvalidInformationException ex) {

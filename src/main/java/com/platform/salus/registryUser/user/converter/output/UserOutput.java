@@ -2,8 +2,6 @@ package com.platform.salus.registryUser.user.converter.output;
 
 import com.platform.salus.common.utils.CommonFields;
 
-import java.util.List;
-
 public class UserOutput extends CommonFields {
 
     private String id;
@@ -13,16 +11,6 @@ public class UserOutput extends CommonFields {
     private String telefone;
     private String email;
     private String senha;
-    private List<String> contacts;
-
-    public List<String> getContacts() {
-        return contacts;
-    }
-
-    public UserOutput setContacts(List<String> contacts) {
-        this.contacts = contacts;
-        return this;
-    }
 
     public String getId() { return id; }
 

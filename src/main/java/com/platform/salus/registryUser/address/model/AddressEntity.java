@@ -13,7 +13,6 @@ public class AddressEntity {
         private Long id;
 
         private String cep;
-        private String pais;
         private String estado;
         private String cidade;
         private String bairro;
@@ -48,15 +47,6 @@ public class AddressEntity {
 
     public AddressEntity setCep(String cep) {
         this.cep = cep;
-        return this;
-    }
-
-    public String getPais() {
-        return pais;
-    }
-
-    public AddressEntity setPais(String pais) {
-        this.pais = pais;
         return this;
     }
 

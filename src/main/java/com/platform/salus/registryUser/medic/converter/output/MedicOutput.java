@@ -1,6 +1,7 @@
 package com.platform.salus.registryUser.medic.converter.output;
 
 import com.platform.salus.common.utils.CommonFields;
+import com.platform.salus.registryUser.user.model.UserEntity;
 
 public class MedicOutput extends CommonFields {
 
@@ -11,17 +12,16 @@ public class MedicOutput extends CommonFields {
     private String telefoneConvenio;
     private String historico;
     private String tipoSanguineo;
-    private String sexo;
     private String deficiencia;
     private String alergias;
     private String obs;
-    private String user;
+    private UserEntity user;
 
-    public String getUser() {
+    public UserEntity getUser() {
         return user;
     }
 
-    public MedicOutput setUser(String user) {
+    public MedicOutput setUser(UserEntity user) {
         this.user = user;
         return this;
     }
@@ -77,15 +77,6 @@ public class MedicOutput extends CommonFields {
 
     public MedicOutput setTipoSanguineo(String tipoSanguineo) {
         this.tipoSanguineo = tipoSanguineo;
-        return this;
-    }
-
-    public String getSexo() {
-        return sexo;
-    }
-
-    public MedicOutput setSexo(String sexo) {
-        this.sexo = sexo;
         return this;
     }
 

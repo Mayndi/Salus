@@ -44,7 +44,7 @@ public class MedicController extends MedicBaseController {
     public ResponseEntity<MedicOutput> update(@PathVariable Long id, @RequestBody MedicUpdateInput medic) {
 
         try {
-            MedicEntity medicEntity = medicService.update(id, this.medicConverter.inputToEntity(medic));
+            MedicEntity medicEntity = medicService.update(id, this.medicConverter.inputToUpdateEntity(medic));
 
             return ok(this.medicConverter.entityToOutput(medicEntity));
         } catch (InvalidInformationException ex) {

@@ -1,9 +1,10 @@
 package com.platform.salus.registryUser.address.converter.input;
 
+import com.platform.salus.registryUser.user.converter.input.UserInput;
+
 public class AddressInput {
 
         private String cep;
-        private String pais;
         private String estado;
         private String cidade;
         private String bairro;
@@ -11,13 +12,13 @@ public class AddressInput {
         private String numero;
         private String complemento;
         private String referencia;
-        private String user;
+        private UserInput user;
 
-    public String getUser() {
+    public UserInput getUser() {
         return user;
     }
 
-    public AddressInput setUser(String user) {
+    public AddressInput setUser(UserInput user) {
         this.user = user;
         return this;
     }
@@ -28,15 +29,6 @@ public class AddressInput {
 
     public AddressInput setCep(String cep) {
         this.cep = cep;
-        return this;
-    }
-
-    public String getPais() {
-        return pais;
-    }
-
-    public AddressInput setPais(String pais) {
-        this.pais = pais;
         return this;
     }
 

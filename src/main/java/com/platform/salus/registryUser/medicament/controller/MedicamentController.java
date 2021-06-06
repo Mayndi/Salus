@@ -43,7 +43,7 @@ public class MedicamentController extends MedicamentBaseController {
     public ResponseEntity<MedicamentOutput> update(@PathVariable Long id, @RequestBody MedicamentInput medicament) {
 
         try {
-            MedicamentEntity medicamentEntity = medicamentService.update(id, this.medicamentConverter.inputToEntity(medicament));
+            MedicamentEntity medicamentEntity = medicamentService.update(id, this.medicamentConverter.inputToUpdateEntity(medicament));
 
             return ok(this.medicamentConverter.entityToOutput(medicamentEntity));
         } catch (InvalidInformationException ex) {

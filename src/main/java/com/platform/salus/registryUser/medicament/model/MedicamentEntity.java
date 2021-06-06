@@ -1,5 +1,6 @@
 package com.platform.salus.registryUser.medicament.model;
 
+import com.fasterxml.jackson.annotation.JsonFormat;
 import com.platform.salus.registryUser.user.model.UserEntity;
 
 import javax.persistence.*;
@@ -9,17 +10,19 @@ import java.time.LocalDate;
 @Table(name = "medicament", schema = "user")
 public class MedicamentEntity {
 
-        @Id
-        @GeneratedValue(strategy = GenerationType.IDENTITY)
-        private Long id;
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Long id;
 
-        private String nomeMedicamento;
-        private LocalDate inicioMed;
-        private LocalDate fimMed;
-        private boolean usoContinuo;
-        private Byte foto;
-        @OneToOne
-        private UserEntity user;
+    private String nomeMedicamento;
+    @JsonFormat(pattern = "dd/MM/yyyy")
+    private LocalDate inicioMed;
+    @JsonFormat(pattern = "dd/MM/yyyy")
+    private LocalDate fimMed;
+    private boolean usoContinuo;
+    private Byte foto;
+    @OneToOne
+    private UserEntity user;
 
     public UserEntity getUser() {
         return user;

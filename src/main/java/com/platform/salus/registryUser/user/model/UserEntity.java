@@ -1,39 +1,27 @@
 package com.platform.salus.registryUser.user.model;
 
-import com.platform.salus.registryUser.contact.model.ContactEntity;
+import com.fasterxml.jackson.annotation.JsonFormat;
 
 import javax.persistence.*;
 import java.time.LocalDate;
-import java.util.List;
 
 @Entity
 @Table(name = "user", schema = "user")
 public class UserEntity {
 
-        @Id
-        @GeneratedValue(strategy = GenerationType.IDENTITY)
-        private Long id;
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Long id;
 
-        private String nomeCompleto;
-        private LocalDate dataNascimento;
-        private String cpf;
-        private String telefone;
-        private String email;
-        private String senha;
-        private String confSenha;
-        private Byte foto;
-
-        @OneToMany(mappedBy = "user", fetch = FetchType.LAZY)
-        private List<ContactEntity> contacts;
-
-    public List<ContactEntity> getContacts() {
-        return contacts;
-    }
-
-    public UserEntity setContacts(List<ContactEntity> contacts) {
-        this.contacts = contacts;
-        return this;
-    }
+    private String nomeCompleto;
+    @JsonFormat(pattern = "dd/MM/yyyy")
+    private LocalDate dataNascimento;
+    private String cpf;
+    private String telefone;
+    private String email;
+    private String senha;
+    private String confSenha;
+    private Byte foto;
 
     public Long getId() {
         return id;

@@ -1,18 +1,20 @@
 package com.platform.salus.registryUser.medicament.converter.input;
 
+import com.platform.salus.registryUser.user.converter.input.UserInput;
+
 public class MedicamentInput {
 
         private String nomeMedicamento;
         private String inicioMed;
         private String fimMed;
         private String usoContinuo;
-        private String user;
+        private UserInput user;
 
-    public String getUser() {
+    public UserInput getUser() {
         return user;
     }
 
-    public MedicamentInput setUser(String user) {
+    public MedicamentInput setUser(UserInput user) {
         this.user = user;
         return this;
     }

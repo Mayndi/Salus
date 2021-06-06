@@ -1,35 +1,35 @@
 package com.platform.salus.registryUser.contact.converter.input;
 
+import com.platform.salus.registryUser.user.converter.input.UserInput;
+
 public class ContactInput {
 
-    private String nomeCompleto;
-    private String telefone;
-    private String user;
+    private String nomeContato;
+    private String telefoneContato;
+    private UserInput user;
 
-    public String getUser() {
+    public UserInput getUser() {
         return user;
     }
 
-    public ContactInput setUser(String user) {
+    public ContactInput setUser(UserInput user) {
         this.user = user;
         return this;
     }
 
-    public String getNomeCompleto() {
-        return nomeCompleto;
+    public String getNomeContato() {
+        return nomeContato;
     }
 
-    public ContactInput setNomeCompleto(String nomeCompleto) {
-        this.nomeCompleto = nomeCompleto;
-        return this;
+    public void setNomeContato(String nomeContato) {
+        this.nomeContato = nomeContato;
     }
 
-    public String getTelefone() {
-        return telefone;
+    public String getTelefoneContato() {
+        return telefoneContato;
     }
 
-    public ContactInput setTelefone(String telefone) {
-        this.telefone = telefone;
-        return this;
+    public void setTelefoneContato(String telefoneContato) {
+        this.telefoneContato = telefoneContato;
     }
 }

@@ -8,6 +8,7 @@ import com.platform.salus.common.utils.ValidationUtils;
 import com.platform.salus.registryUser.medicament.converter.input.MedicamentInput;
 import com.platform.salus.registryUser.medicament.converter.output.MedicamentOutput;
 import com.platform.salus.registryUser.medicament.model.MedicamentEntity;
+import com.platform.salus.registryUser.user.converter.UserConverter;
 import com.platform.salus.registryUser.user.model.UserEntity;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -17,29 +18,42 @@ public class MedicamentConverter {
 
     private final Internationalization messagesBundle;
     private final ConverterUtils converterUtils;
+    private final UserConverter userConverter;
 
     @Autowired
-    public MedicamentConverter(Internationalization internationalization, ConverterUtils converterUtils) {
+    public MedicamentConverter(Internationalization internationalization, ConverterUtils converterUtils, UserConverter userConverter) {
         this.messagesBundle = internationalization;
         this.converterUtils = converterUtils;
+        this.userConverter = userConverter;
     }
 
     public MedicamentEntity inputToEntity(MedicamentInput input) throws InvalidInformationException {
         checkMedicamentCreate(input);
+        UserEntity userEntity = userConverter.inputToEntity(input.getUser());
+        userEntity.setId(input.getUser().getId());
         return new MedicamentEntity().setNomeMedicamento(input.getNomeMedicamento())
                 .setInicioMed(converterUtils.convertStringToLocalDate(input.getInicioMed()))
                 .setFimMed(converterUtils.convertStringToLocalDate(input.getFimMed()))
                 .setUsoContinuo(Boolean.valueOf(input.getUsoContinuo()))
-                .setUser(new UserEntity().setId(Long.valueOf(input.getUser())));
+                .setUser(userEntity);
+    }
+
+    public MedicamentEntity inputToUpdateEntity(MedicamentInput input) throws InvalidInformationException {
+        checkMedicamentCreate(input);
+        return new MedicamentEntity().setNomeMedicamento(input.getNomeMedicamento())
+                .setInicioMed(converterUtils.convertStringToLocalDate(input.getInicioMed()))
+                .setFimMed(converterUtils.convertStringToLocalDate(input.getFimMed()))
+                .setUsoContinuo(Boolean.valueOf(input.getUsoContinuo()));
     }
 
     public MedicamentOutput entityToOutput(MedicamentEntity medicamentEntity) {
         MedicamentOutput medicamentOutput = new MedicamentOutput();
-        medicamentOutput.setNomeMedicamento(medicamentEntity.getNomeMedicamento())
+        medicamentOutput.setId(medicamentEntity.getId().toString())
+                .setNomeMedicamento(medicamentEntity.getNomeMedicamento())
                 .setInicioMed(converterUtils.convertDateToString(medicamentEntity.getInicioMed()))
                 .setFimMed(converterUtils.convertDateToString(medicamentEntity.getFimMed()))
                 .setUsoContinuo(String.valueOf(medicamentEntity.isUsoContinuo()))
-                .setUser(medicamentEntity.getUser().getId().toString());
+                .setUser(medicamentEntity.getUser());
 
         return medicamentOutput;
     }

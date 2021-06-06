@@ -39,7 +39,6 @@ public class MedicService {
         medicEntityToSave.setTelefoneConvenio(medicEntity.getTelefoneConvenio());
         medicEntityToSave.setHistorico(medicEntity.getHistorico());
         medicEntityToSave.setTipoSanguineo(medicEntity.getTipoSanguineo());
-        medicEntityToSave.setSexo(medicEntity.getSexo());
         medicEntityToSave.setDeficiencia(medicEntity.getDeficiencia());
         medicEntityToSave.setAlergias(medicEntity.getAlergias());
         medicEntityToSave.setObs(medicEntity.getObs());

@@ -12,10 +12,10 @@ public class ContactEntity {
         @GeneratedValue(strategy = GenerationType.IDENTITY)
         private Long id;
 
-        private String nomeCompleto;
-        private String telefone;
+        private String nomeContato;
+        private String telefoneContato;
 
-        @ManyToOne
+        @OneToOne
         private UserEntity user;
 
     public UserEntity getUser() {
@@ -36,21 +36,21 @@ public class ContactEntity {
         return this;
     }
 
-    public String getNomeCompleto() {
-        return nomeCompleto;
+    public String getNomeContato() {
+        return nomeContato;
     }
 
-    public ContactEntity setNomeCompleto(String nomeCompleto) {
-        this.nomeCompleto = nomeCompleto;
+    public ContactEntity setNomeContato(String nomeContato) {
+        this.nomeContato = nomeContato;
         return this;
     }
 
-    public String getTelefone() {
-        return telefone;
+    public String getTelefoneContato() {
+        return telefoneContato;
     }
 
-    public ContactEntity setTelefone(String telefone) {
-        this.telefone = telefone;
+    public ContactEntity setTelefoneContato(String telefoneContato) {
+        this.telefoneContato = telefoneContato;
         return this;
     }
 }

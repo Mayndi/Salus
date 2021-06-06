@@ -1,6 +1,7 @@
 package com.platform.salus.registryUser.medicament.converter.output;
 
 import com.platform.salus.common.utils.CommonFields;
+import com.platform.salus.registryUser.user.model.UserEntity;
 
 public class MedicamentOutput extends CommonFields {
 
@@ -10,13 +11,13 @@ public class MedicamentOutput extends CommonFields {
     private String inicioMed;
     private String fimMed;
     private String usoContinuo;
-    private String user;
+    private UserEntity user;
 
-    public String getUser() {
+    public UserEntity getUser() {
         return user;
     }
 
-    public MedicamentOutput setUser(String user) {
+    public MedicamentOutput setUser(UserEntity user) {
         this.user = user;
         return this;
     }

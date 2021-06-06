@@ -17,7 +17,6 @@ public class MedicEntity {
     private String telefoneConvenio;
     private String historico;
     private String tipoSanguineo;
-    private String sexo;
     private String deficiencia;
     private String alergias;
     private String obs;
@@ -84,15 +83,6 @@ public class MedicEntity {
 
     public MedicEntity setTipoSanguineo(String tipoSanguineo) {
         this.tipoSanguineo = tipoSanguineo;
-        return this;
-    }
-
-    public String getSexo() {
-        return sexo;
-    }
-
-    public MedicEntity setSexo(String sexo) {
-        this.sexo = sexo;
         return this;
     }
 

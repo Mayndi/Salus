@@ -43,7 +43,7 @@ public class AddressController extends AddressBaseController {
     public ResponseEntity<AddressOutput> update(@PathVariable Long id, @RequestBody AddressInput address) {
 
         try {
-            AddressEntity addressEntity = addressService.update(id, this.addressConverter.inputToEntity(address));
+            AddressEntity addressEntity = addressService.update(id, this.addressConverter.inputToUpdateEntity(address));
 
             return ok(this.addressConverter.entityToOutput(addressEntity));
         } catch (InvalidInformationException ex) {

@@ -3,8 +3,10 @@ package com.platform.salus.registryUser.address.service;
 import com.platform.salus.common.config.Internationalization;
 import com.platform.salus.common.exceptions.InvalidInformationException;
 import com.platform.salus.common.exceptions.InvalidPageRequestException;
+import com.platform.salus.registryUser.address.converter.output.AddressOutput;
 import com.platform.salus.registryUser.address.model.AddressEntity;
 import com.platform.salus.registryUser.address.repository.AddressRepository;
+import com.platform.salus.registryUser.user.model.UserEntity;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.PageRequest;
 import org.springframework.stereotype.Service;
@@ -35,7 +37,6 @@ public class AddressService {
         AddressEntity addressEntityToSave = this.findById(id);
 
         addressEntityToSave.setCep(addressEntity.getCep());
-        addressEntityToSave.setPais(addressEntity.getPais());
         addressEntityToSave.setEstado(addressEntity.getEstado());
         addressEntityToSave.setCidade(addressEntity.getCidade());
         addressEntityToSave.setBairro(addressEntity.getBairro());

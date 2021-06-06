@@ -2,18 +2,23 @@ package com.platform.salus.registryUser.user.controller;
 
 import com.platform.salus.common.exceptions.InvalidInformationException;
 import com.platform.salus.common.exceptions.InvalidPageRequestException;
+import com.platform.salus.registryUser.user.converter.LoginDto;
 import com.platform.salus.registryUser.user.converter.UserConverter;
+import com.platform.salus.registryUser.user.converter.input.Login;
 import com.platform.salus.registryUser.user.converter.input.UserInput;
 import com.platform.salus.registryUser.user.converter.input.UserUpdateInput;
 import com.platform.salus.registryUser.user.converter.output.UserCountOutput;
 import com.platform.salus.registryUser.user.converter.output.UserOutput;
 import com.platform.salus.registryUser.user.model.UserEntity;
 import com.platform.salus.registryUser.user.service.UserService;
+import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
+import org.springframework.web.server.ResponseStatusException;
 
 import java.util.Collections;
 import java.util.List;
+import java.util.Optional;
 import java.util.stream.Collectors;
 
 @RestController
@@ -26,6 +31,12 @@ public class UserController extends UserBaseController {
     public UserController(UserService userService, UserConverter userConverter) {
         this.userService = userService;
         this.userConverter = userConverter;
+    }
+
+    @PostMapping(value = "/login")
+    public ResponseEntity<LoginDto> login(@RequestBody Login login) {
+
+        return ok(userService.login(login));
     }
 
     @PostMapping(value = "/create")
@@ -48,7 +59,7 @@ public class UserController extends UserBaseController {
 
             return ok(this.userConverter.entityToOutput(userEntity));
         } catch (InvalidInformationException ex) {
-            return error((UserOutput)  new UserOutput().setErrorMessage(ex.getMessage()));
+            return error((UserOutput) new UserOutput().setErrorMessage(ex.getMessage()));
         }
     }
 
@@ -86,7 +97,7 @@ public class UserController extends UserBaseController {
             Long count = userService.count();
 
             return ok(new UserCountOutput().setCount(count));
-        } catch (Exception ex){
+        } catch (Exception ex) {
             return error((UserCountOutput) new UserCountOutput().setErrorMessage(ex.getMessage()));
         }
     }

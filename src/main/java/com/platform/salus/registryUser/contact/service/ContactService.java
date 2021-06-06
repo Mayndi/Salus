@@ -34,8 +34,8 @@ public class ContactService {
     public ContactEntity update(Long id, ContactEntity contactEntity) throws InvalidInformationException {
         ContactEntity contactEntityToSave = this.findById(id);
 
-        contactEntityToSave.setNomeCompleto(contactEntity.getNomeCompleto());
-        contactEntityToSave.setTelefone(contactEntity.getTelefone());
+        contactEntityToSave.setNomeContato(contactEntity.getNomeContato());
+        contactEntityToSave.setTelefoneContato(contactEntity.getTelefoneContato());
 
         ContactEntity updatedContact = contactRepository.save(contactEntityToSave);
 

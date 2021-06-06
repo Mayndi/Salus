@@ -1,6 +1,7 @@
 package com.platform.salus.registryUser.user.controller;
 
 import com.platform.salus.common.controller.BaseController;
+import com.platform.salus.registryUser.user.converter.LoginDto;
 import com.platform.salus.registryUser.user.converter.output.UserCountOutput;
 import com.platform.salus.registryUser.user.converter.output.UserOutput;
 import org.springframework.http.ResponseEntity;
@@ -32,4 +33,13 @@ public class UserBaseController extends BaseController {
     public ResponseEntity<UserCountOutput> error(UserCountOutput obj) {
         return ResponseEntity.badRequest().body(obj);
     }
+
+    public ResponseEntity<LoginDto> ok(LoginDto obj) {
+        return ResponseEntity.ok(obj);
+    }
+
+    public ResponseEntity<LoginDto> error(LoginDto obj) {
+        return ResponseEntity.badRequest().body(obj);
+    }
+
 }

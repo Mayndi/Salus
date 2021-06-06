@@ -1,5 +1,7 @@
 package com.platform.salus.registryUser.medic.converter.input;
 
+import com.platform.salus.registryUser.user.converter.input.UserInput;
+
 public class MedicInput {
 
     private String nSus;
@@ -7,17 +9,16 @@ public class MedicInput {
     private String telefoneConvenio;
     private String historico;
     private String tipoSanguineo;
-    private String sexo;
     private String deficiencia;
     private String alergias;
     private String obs;
-    private String user;
+    private UserInput user;
 
-    public String getUser() {
+    public UserInput getUser() {
         return user;
     }
 
-    public MedicInput setUser(String user) {
+    public MedicInput setUser(UserInput user) {
         this.user = user;
         return this;
     }
@@ -64,15 +65,6 @@ public class MedicInput {
 
     public MedicInput setTipoSanguineo(String tipoSanguineo) {
         this.tipoSanguineo = tipoSanguineo;
-        return this;
-    }
-
-    public String getSexo() {
-        return sexo;
-    }
-
-    public MedicInput setSexo(String sexo) {
-        this.sexo = sexo;
         return this;
     }
 

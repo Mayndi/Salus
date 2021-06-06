@@ -83,7 +83,7 @@ public class ValidationUtils {
 
     public static void checkFone(String telefone, String messageIfError) throws InvalidInformationException {
         String telefoneCheck = telefone.replace(".", "").replace("-", "").replace("(", "").replace(")", "");
-        if (telefoneCheck.length() > 10 || telefone == null)
+        if (telefoneCheck.length() < 10 || telefone == null)
             throw new InvalidInformationException(messageIfError);
     }
 

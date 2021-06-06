@@ -1,13 +1,13 @@
 package com.platform.salus.registryUser.address.converter.output;
 
 import com.platform.salus.common.utils.CommonFields;
+import com.platform.salus.registryUser.user.model.UserEntity;
 
 public class AddressOutput extends CommonFields {
 
         private String id;
 
         private String cep;
-        private String pais;
         private String estado;
         private String cidade;
         private String bairro;
@@ -15,13 +15,13 @@ public class AddressOutput extends CommonFields {
         private String numero;
         private String complemento;
         private String referencia;
-        private String user;
+        private UserEntity user;
 
-    public String getUser() {
+    public UserEntity getUser() {
         return user;
     }
 
-    public AddressOutput setUser(String user) {
+    public AddressOutput setUser(UserEntity user) {
         this.user = user;
         return this;
     }
@@ -41,15 +41,6 @@ public class AddressOutput extends CommonFields {
 
     public AddressOutput setCep(String cep) {
         this.cep = cep;
-        return this;
-    }
-
-    public String getPais() {
-        return pais;
-    }
-
-    public AddressOutput setPais(String pais) {
-        this.pais = pais;
         return this;
     }
 

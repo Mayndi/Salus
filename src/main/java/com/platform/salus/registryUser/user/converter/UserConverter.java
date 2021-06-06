@@ -12,8 +12,6 @@ import com.platform.salus.registryUser.user.model.UserEntity;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import java.util.stream.Collectors;
-
 @Service
 public class UserConverter {
 
@@ -55,10 +53,6 @@ public class UserConverter {
                 .setTelefone(userEntity.getTelefone())
                 .setEmail(userEntity.getEmail())
                 .setSenha(userEntity.getSenha());
-        if(userEntity.getContacts() != null)
-            userOutput.setContacts(userEntity.getContacts().stream()
-                    .map(contactEntity -> contactEntity.getId().toString())
-                    .collect(Collectors.toList()));
 
         return userOutput;
     }
